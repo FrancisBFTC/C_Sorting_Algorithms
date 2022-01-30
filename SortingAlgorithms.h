@@ -123,9 +123,9 @@ void SortOptions(){
     scanf("%d", &Op);
     
     switch(Op){
-         case 1: Method = "SELECAO";
+         case 1: Method = "SELECTIONSORT";
                  break;
-         case 2: Method = "INSERCAO";
+         case 2: Method = "INSERTIONSORT";
                  break;
       	 case 3: Method = "BUBBLESORT";
       	 		 break;
@@ -146,7 +146,6 @@ void SortOptions(){
          case 11: Method = "HEAPSORT";
          		  break;
          case 12: Method = "TIMSORT";
-         		  noExist = true;
          		  break;
          case 13: Method = "STRANDSORT";
          		  noExist = true;
