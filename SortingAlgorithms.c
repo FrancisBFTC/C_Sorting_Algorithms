@@ -19,6 +19,7 @@
 #include "MergeSort.h"
 #include "ShellSort.h"
 #include "RadixSort.h"
+#include "HeapSort.h"
 
 //Variáveis de manipulaçao
 int   q = 0;
@@ -66,6 +67,8 @@ void SortingAlgorithm(char* Alg, int vet[], int tam){
           		     ShellSort(vet, tam);
           else if(Alg == "RADIXSORT")
           			 RadixSort(vet, tam);
+          else if(Alg == "HEAPSORT")
+          			 HeapSort(vet, tam);
           else{
             printf("Este Metodo ainda nao existe no sistema!");	
 		  }
@@ -91,6 +94,7 @@ void Options(){
     printf("[8] - MergeSort\n");
     printf("[9] - ShellSort\n");
     printf("[10] - RadixSort\n");
+    printf("[11] - HeapSort\n");
     printf("[0] - Cancelar\n");
     scanf("%d", &Op);
     
@@ -114,6 +118,8 @@ void Options(){
          case 9: Method = "SHELLSORT";
                  break;
          case 10: Method = "RADIXSORT";
+         		  break;
+         case 11: Method = "HEAPSORT";
          		  break;
          case 0: printf("\nVoce cancelou!\n");
          		 out = true;
