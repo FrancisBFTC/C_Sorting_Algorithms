@@ -15,6 +15,8 @@
 #include "CombSort.h"
 #include "GnomeSort.h"
 #include "CockTailSort.h"
+#include "QuickSort.h"
+#include "MergeSort.h"
 
 //Variáveis de manipulaçao
 int   q = 0;
@@ -42,9 +44,9 @@ void putData(int vetor[], int tam){
 
 //Escolha do algoritmo de ordenação
 void SortingAlgorithm(char* Alg, int vet[], int tam){
-          if(Alg == "SELECAO")
+          if(Alg == "SELECTIONSORT")
                  SelectionSort(vet, tam);
-          else if(Alg == "INSERCAO")
+          else if(Alg == "INSERTIONSORT")
                      InsertionSort(vet, tam);
           else if(Alg == "BUBBLESORT")
               		 BubbleSort(vet, tam);
@@ -54,6 +56,10 @@ void SortingAlgorithm(char* Alg, int vet[], int tam){
           			 GnomeSort(vet, tam);
           else if(Alg == "COCKTAILSORT")
           			 CockTailSort(vet, tam);
+          else if(Alg == "QUICKSORT")
+          			 QuickSort(vet, 0, tam);
+          else if(Alg == "MERGESORT")
+          			 MergeSort(vet, 0, tam-1);
           else{
             printf("Este Metodo ainda nao existe no sistema!");	
 		  }
@@ -95,10 +101,8 @@ void Options(){
       	 case 6: Method = "COCKTAILSORT";
       	 		 break;
          case 7: Method = "QUICKSORT";
-                 noExist = true;
                  break;
          case 8: Method = "MERGESORT";
-                 noExist = true;
                  break;
          case 9: Method = "SHELLSORT";
                  noExist = true;
