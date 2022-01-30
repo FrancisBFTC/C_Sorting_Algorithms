@@ -54,6 +54,47 @@ void MergeSort(int *vector, int begin, int end) {
     free(vectorTemp);
 }
 
+/* Adaptação do MergeSort para utilização do TimSort */
+void Merge(int arr[], int l, int m, int r){
+	int len1 = m - l + 1, i;
+	int len2 = r - m;
+	int left[len1], right[len2];
+	
+	for(i = 0; i < len1; i++)
+		left[i] = arr[l + i]; // Preenchendo array da esquerda
+		
+	for(i = 0; i < len2; i++)
+		right[i] = arr[m + 1 + i]; // Preenchendo array da direita
+	
+	i = 0;
+	int j = 0;
+	int k = l;
+	
+	while(i < len1 && j < len2){ // Iterar em ambas os vetores esquerda e direita
+		if(left[i] <= right[j]){ // O elemento IF à esquerda é menor que o incremento i empurrando para um array maior
+			arr[k] = left[i];
+			i++;
+		}else {                  // O elemento no array direito é maior
+			arr[k] = right[j]; 
+			j++;
+		}
+		k++;
+	}
+	
+	while(i < len1){ // Este loop copia o elemento restante no array esquerdo
+		arr[k] = left[i];
+		k++;
+		i++;
+	}
+	
+	while(j < len2){ // Este loop copia o elemento restante no array direito
+		arr[k] = right[j];
+		k++;
+		j++;
+	}
+	
+}
+
 
 /* ***** FIM DAS FUNÇOES DE ORDENAÇÃO ***** */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */ 
