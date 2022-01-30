@@ -1,10 +1,10 @@
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ***** FUNÇOES DE ORDENAÇÃO ***** */
 
-// Ordenação por ODDEVENSORT
+// Ordenação por SMOOTHSORT
 
-void OddEvenSort(int vector[], const int n){
-	// TODO Make the OddEvenSort Algorithm.
+void SmoothSort(int vector[], const int n){
+	// TODO Make the SmoothSort Algorithm calling other functions with C.
 }
 
 /* ***** FIM DAS FUNÇOES DE ORDENAÇÃO ***** */
