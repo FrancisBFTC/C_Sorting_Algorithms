@@ -17,6 +17,7 @@
 #include "CockTailSort.h"
 #include "QuickSort.h"
 #include "MergeSort.h"
+#include "ShellSort.h"
 
 //Variáveis de manipulaçao
 int   q = 0;
@@ -60,6 +61,8 @@ void SortingAlgorithm(char* Alg, int vet[], int tam){
           			 QuickSort(vet, 0, tam);
           else if(Alg == "MERGESORT")
           			 MergeSort(vet, 0, tam-1);
+          else if(Alg == "SHELLSORT")
+          		     ShellSort(vet, tam);
           else{
             printf("Este Metodo ainda nao existe no sistema!");	
 		  }
@@ -105,11 +108,15 @@ void Options(){
          case 8: Method = "MERGESORT";
                  break;
          case 9: Method = "SHELLSORT";
-                 noExist = true;
                  break;
-         default: printf("\nVoce cancelou!\n");
-                  out = true;
-                  break;   
+         case 0: printf("\nVoce cancelou!\n");
+         		 out = true;
+         		 break;
+         default: 
+                noExist = true;
+                break;
+                  
+                     
     }
     printf("\n------------------------------\n");
     printf("Metodo de %s", Method);
