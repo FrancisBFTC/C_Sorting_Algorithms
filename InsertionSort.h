@@ -25,5 +25,18 @@ void InsertionSort (int vet[], int tam){
     }
 }
 
+/* Adaptação do InsertionSort para utilização do TimSort */
+void Insertion(int arr[], int left, int right){
+	int i;
+	for(i = left + 1; i <= right; i++){
+		int t = arr[i];
+		int j = i - 1;
+		while(j >= left && t < arr[j]){
+			arr[j+1] = arr[j--];
+		}
+		arr[j+1] = t;
+	}
+}
+
 /* ***** FIM DAS FUNÇOES DE ORDENAÇÃO ***** */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
