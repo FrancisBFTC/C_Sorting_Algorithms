@@ -14,6 +14,7 @@
 #include "BubbleSort.h"
 #include "CombSort.h"
 #include "GnomeSort.h"
+#include "CockTailSort.h"
 
 //Variáveis de manipulaçao
 int   q = 0;
@@ -51,6 +52,8 @@ void SortingAlgorithm(char* Alg, int vet[], int tam){
           			 CombSort(vet, tam);
           else if(Alg == "GNOMESORT")
           			 GnomeSort(vet, tam);
+          else if(Alg == "COCKTAILSORT")
+          			 CockTailSort(vet, tam);
           else{
             printf("Este Metodo ainda nao existe no sistema!");	
 		  }
@@ -71,9 +74,10 @@ void Options(){
     printf("[3] - BubbleSort\n");
     printf("[4] - CombSort\n");
     printf("[5] - GnomeSort\n");
-    printf("[6] - QuickSort\n");
-    printf("[7] - MergeSort\n");
-    printf("[8] - ShellSort\n");
+    printf("[6] - CockTailSort\n");
+    printf("[7] - QuickSort\n");
+    printf("[8] - MergeSort\n");
+    printf("[9] - ShellSort\n");
     printf("[0] - Cancelar\n");
     scanf("%d", &Op);
     
@@ -88,13 +92,15 @@ void Options(){
       	 		 break;
       	 case 5: Method = "GNOMESORT";
       	 		 break;
-         case 6: Method = "QUICKSORT";
+      	 case 6: Method = "COCKTAILSORT";
+      	 		 break;
+         case 7: Method = "QUICKSORT";
                  noExist = true;
                  break;
-         case 7: Method = "MERGESORT";
+         case 8: Method = "MERGESORT";
                  noExist = true;
                  break;
-         case 8: Method = "SHELLSORT";
+         case 9: Method = "SHELLSORT";
                  noExist = true;
                  break;
          default: printf("\nVoce cancelou!\n");
