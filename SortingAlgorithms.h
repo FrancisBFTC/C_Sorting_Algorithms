@@ -148,7 +148,6 @@ void SortOptions(){
          case 12: Method = "TIMSORT";
          		  break;
          case 13: Method = "STRANDSORT";
-         		  noExist = true;
          		  break;
          case 14: Method = "SMOOTHSORT";
           		  noExist = true;
