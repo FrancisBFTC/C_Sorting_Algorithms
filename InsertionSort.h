@@ -13,16 +13,16 @@
 
 void InsertionSort (int vector[], int size){
     int i, j, x;
-    for (i=1; i<=size; i++){				// começando do 2ª item, navega no Array até chegar no último item
-        x = vector[i];						// armazena em x o 2ª item
-        j = i-1;							// j apontará pro 1ª item
-        vector[-1] = x;  					// armazena o 2ª item em uma posição -1.
-        while (x < vector[j]){ 				// enquanto o 2ª item for menor que o 1ª item...
+    for (i=1; i<=size; i++){                // começando do 2ª item, navega no Array até chegar no último item
+        x = vector[i];                      // armazena em x o 2ª item
+        j = i-1;                            // j apontará pro 1ª item
+        vector[-1] = x;                     // armazena o 2ª item em uma posição -1.
+        while (x < vector[j]){              // enquanto o 2ª item for menor que o 1ª item...
             vector[j+1] = vector[j];        // a 2ª posição recebe o 1ª item
-            j--;							// j aponta pro item x na posição -1.
-        }									// Itera no While até x seja igual ao valor da posição -1 (que é x)
-        vector[j+1] = x; 					// armazena o 2ª item na 1ª posição
-    }										// Na próxima iteração o 2ª item passará a ser o 3ª, depois o 4ª,etc..
+            j--;                            // j aponta pro item x na posição -1.
+        }                                   // Itera no While até x seja igual ao valor da posição -1 (que é x)
+        vector[j+1] = x;                    // armazena o 2ª item na 1ª posição
+    }                                       // Na próxima iteração o 2ª item passará a ser o 3ª, depois o 4ª,etc..
 }
 
 /* 
