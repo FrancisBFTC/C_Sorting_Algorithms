@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <conio.h>
+#include <string.h>
 
 #include "SelectionSort.h"
 #include "InsertionSort.h"
@@ -28,7 +29,7 @@
 #include "StoogeSort.h"
 
 //Variáveis de manipulaçao
-int   q = 0;
+int   qt = 0;
 char  v = 's';
 char* Method = "";
 bool  out = false, noExist = false;
@@ -42,6 +43,14 @@ void showData(int vetor[], int tam){
      }
 }
 
+//Mostrar Dados do vetor
+void showDataStr(char* data[], int tam){
+     int i;
+     for(i = 0; i < tam; i++){
+          printf("(%s) ", data[i]);
+     }
+}
+
 //Colocar Dados no vetor
 void putData(int vetor[], int tam){
      int i;
@@ -52,7 +61,8 @@ void putData(int vetor[], int tam){
 }
 
 //Escolha do algoritmo de ordenação
-void SortingAlgorithm(char* Alg, int vet[], int tam){
+void SortingAlgorithm(char* Alg, int vet[], char* Str[], int tam){
+	 	 
           if(Alg == "SELECTIONSORT")
                  SelectionSort(vet, tam);
           else if(Alg == "INSERTIONSORT")
@@ -80,7 +90,7 @@ void SortingAlgorithm(char* Alg, int vet[], int tam){
           else if(Alg == "STRANDSORT")
           			 StrandSort(vet, tam);
           else if(Alg == "SMOOTHSORT")
-          			 SmoothSort(vet, tam);
+          		SmoothSort(Str, tam);		 
           else if(Alg == "ODDEVENSORT")
           			 OddEvenSort(vet, tam);
           else if(Alg == "BOGOSORT")
@@ -90,6 +100,7 @@ void SortingAlgorithm(char* Alg, int vet[], int tam){
           else{
             printf("Este Metodo ainda nao existe no sistema!");	
 		  }
+		  
 } 
 
 //Informações de opções na tela
@@ -99,7 +110,7 @@ void SortOptions(){
     
     printf("Insira a quantidade de dados : ");
     scanf("%d", &quant);
-    q = quant; 
+    qt = quant; 
     
     printf("Escolha o Método de Ordenacao: \n\n");
     printf("[1] - SelectionSort\n");
@@ -150,7 +161,6 @@ void SortOptions(){
          case 13: Method = "STRANDSORT";
          		  break;
          case 14: Method = "SMOOTHSORT";
-          		  noExist = true;
          		  break;
          case 15: Method = "ODDEVENSORT";
           		  noExist = true;
