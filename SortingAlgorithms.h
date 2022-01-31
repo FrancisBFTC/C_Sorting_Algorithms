@@ -90,13 +90,13 @@ void SortingAlgorithm(char* Alg, int vet[], char* Str[], int tam){
           else if(Alg == "STRANDSORT")
           			 StrandSort(vet, tam);
           else if(Alg == "SMOOTHSORT")
-          		SmoothSort(Str, tam);		 
+          		SmoothSort(Str, 6);		 
           else if(Alg == "ODDEVENSORT")
           			 OddEvenSort(vet, tam);
           else if(Alg == "BOGOSORT")
           			 BogoSort(vet, tam);
           else if(Alg == "STOOGESORT")
-          			 StoogeSort(vet, tam);
+          			 StoogeSort(vet, 0, tam-1);
           else{
             printf("Este Metodo ainda nao existe no sistema!");	
 		  }
@@ -108,11 +108,7 @@ void SortOptions(){
     int quant;
     int Op;
     
-    printf("Insira a quantidade de dados : ");
-    scanf("%d", &quant);
-    qt = quant; 
-    
-    printf("Escolha o Método de Ordenacao: \n\n");
+    printf("Metodos de Ordenacao: \n\n");
     printf("[1] - SelectionSort\n");
     printf("[2] - InsertionSort\n");
     printf("[3] - BubbleSort\n");
@@ -131,7 +127,15 @@ void SortOptions(){
     printf("[16] - BogoSort\n");
     printf("[17] - StoogeSort\n");
     printf("[0] - Cancelar\n");
+    
+    printf("Qual gostaria de utilizar? ");
     scanf("%d", &Op);
+    
+    if(Op != 14 && Op <= 17){
+    	printf("Insira a quantidade de dados : ");
+    	scanf("%d", &quant);
+    	qt = quant; 
+	}
     
     switch(Op){
          case 1: Method = "SELECTIONSORT";
@@ -163,13 +167,10 @@ void SortOptions(){
          case 14: Method = "SMOOTHSORT";
          		  break;
          case 15: Method = "ODDEVENSORT";
-          		  noExist = true;
          		  break;
          case 16: Method = "BOGOSORT";
-          		  noExist = true;
          		  break;
          case 17: Method = "STOOGESORT";
-          		  noExist = true;
          		  break;
          case 0: printf("\nVoce cancelou!\n");
          		 out = true;
