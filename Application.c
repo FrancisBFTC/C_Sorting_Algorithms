@@ -15,7 +15,7 @@ int main(void){
                 noExist = false;
                 
                 int vetor[qt];
-				 char* data[ ] = {"dddd", "bbbb", "aaaa", "cccc"};
+				char* data[6] = {"dddd", "bbbb", "aaaa", "cccc", "ffff", "eeee"};
                 
                 if((strcmp(Method,"SMOOTHSORT") != 0)){
                 	putData(vetor, qt);
@@ -27,20 +27,21 @@ int main(void){
                 	printf("\n \n NUMEROS ORDENADOS: \n");
                 	showData(vetor, qt);
                 	
+                	printf("\n");
+                	
+                	if(strcmp(Method, "BOGOSORT") == 0)
+                		printf("\nParabens! Voce esta com Sorte. :)\n\n");
+                	
            		}else{
            			
            			printf("\n PALAVRAS DESORDENADAS: \n");
-                	showDataStr(data, qt);
+                	showDataStr(data, 6);
                 	
                 	SortingAlgorithm("SMOOTHSORT", vetor, data, qt);
                 	printf("\n \n PALAVRAS ORDENADAS: \n");
-                	showDataStr(data, qt);
+                	showDataStr(data, 6);
 				}
                 
-                
-              //  int i;
-              //   for(i = 0; i < 5; i++)
-              //  	printf("{%s}", data[i]);
                 
                 printf("\nDeseja continuar? (s/n)\n");
                 v = getch();
