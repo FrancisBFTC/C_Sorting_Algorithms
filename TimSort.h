@@ -14,7 +14,7 @@ algoritmo anterior altamente sintonizado, híbrido, samplesort de Python em matri
 matriz uma vez, da esquerda para a direita, alternadamente, identificando o próximo passo, em seguida, fundindo-os em passos anteriores "inteligentemente". 
 Todo o resto é complicação pela velocidade, e alguma medida duramente conquistada da eficiência de memória.*/
 
-/* TimSort [2] é um algoritmo híbrido de ordenação baseado no MergeSort e InsertionSort. O algoritmo baseia-se na ideia de que, no mundo real, um vetor de dados 
+/* TimSort é um algoritmo híbrido de ordenação baseado no MergeSort e InsertionSort. O algoritmo baseia-se na ideia de que, no mundo real, um vetor de dados 
 a ser ordenado contém sub-vetores já ordenados, não importando como (decrescentemente ou crescentemente). Assim, o TimSort está à frente da maioria dos algoritmos 
 de ordenação, mesmo não apresentando descobertas matemáticas complexas. O fato é que na realidade o TimSort não é um algoritmo autônomo, mas um híbrido, 
 uma combinação eficiente de outros algoritmos, temperado com as idéias do autor. O algoritmo completo comentado, traduzido do Python para Java pode ser encontrado 
