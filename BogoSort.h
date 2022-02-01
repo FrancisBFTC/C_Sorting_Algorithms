@@ -2,7 +2,7 @@
 /* ***** FUNÇOES DE ORDENAÇÃO ***** */
 
 // Ordenação por BOGOSORT (CaseSort ou Estou com Sorte)
-
+//
 /* Bogosort (também conhecido como CaseSort ou Estou com Sort), é um algoritmo de ordenação extremamente ineficiente. 
 É baseado na reordenação aleatória dos elementos. Não é utilizado na prática, mas pode ser usado no ensino de algoritmos 
 mais eficientes. Seu nome veio do engraçado termo quantum bogodynamics e, ultimamente, a palavra bogus. 
