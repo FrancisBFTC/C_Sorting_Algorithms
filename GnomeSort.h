@@ -7,6 +7,7 @@
 // com uma seqüencia grande de trocas assim como o Bubble sort. O algoritmo percorre o vetor comparando seus elementos dois a dois, 
 // assim que ele encontra um elemento que está na posição incorreta, ou seja, um número maior antes de um menor, ele troca a posição 
 // dos elementos, e volta com este elemento até que encontre o seu respectivo lugar.
+//
 
 void Swap(int *, int *);
 void GnomeSort(int[], int);
