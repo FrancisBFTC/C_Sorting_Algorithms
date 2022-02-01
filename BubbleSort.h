@@ -7,8 +7,8 @@
 // A ideia é percorrer o vetor diversas vezes, a cada passagem fazendo flutuar para o topo o maior elemento da sequência. 
 // Essa movimentação lembra a forma como as bolhas em um tanque de água procuram seu próprio nível, e disso vem o nome do algoritmo.
 
-// No melhor caso, o algoritmo executa n {\displaystyle n} {\displaystyle n} operações relevantes, onde n representa o número de elementos 
-// do vetor. No pior caso, são feitas n 2 {\displaystyle n^{2}} {\displaystyle n^{2}} operações. A complexidade desse algoritmo é de 
+// No melhor caso, o algoritmo executa n  operações relevantes, onde n representa o número de elementos 
+// do vetor. No pior caso, são feitas n ^ 2 operações. A complexidade desse algoritmo é de 
 // Ordem quadrática. Por isso, ele não é recomendado para programas que precisem de velocidade e operem com quantidade elevada de dados. 
 
 void BubbleSort (int vet[], int tam){
