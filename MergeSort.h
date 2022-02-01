@@ -8,7 +8,8 @@
 // Esse algoritmo divide o problema em pedaços menores, resolve cada pedaço e depois junta (merge) os resultados. O vector será dividido em 
 // duas partes iguais, que serão cada uma divididas em duas partes, e assim até ficar um ou dois elementos cuja ordenação é trivial. 
 // Para juntar as partes ordenadas os dois elementos de cada parte são separados e o menor deles é selecionado e retirado de sua parte. 
-// Em seguida os menores entre os restantes são comparados e assim se prossegue até juntar as partes.  
+// Em seguida os menores entre os restantes são comparados e assim se prossegue até juntar as partes.
+//
 
 
 void MergeSort(int *vector, int begin, int end) {
