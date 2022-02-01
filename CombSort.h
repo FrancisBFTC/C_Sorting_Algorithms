@@ -3,7 +3,7 @@
 
 // Ordenação por CombSort
 
-// O algoritmo Comb sort (ou Combo sort ou ainda algoritmo do pente[1]) é um algoritmo de ordenação relativamente simples, 
+// O algoritmo Comb sort (ou Combo sort ou ainda algoritmo do pente) é um algoritmo de ordenação relativamente simples, 
 // e faz parte da família de algoritmos de ordenação por troca.O Comb sort melhora o Bubble sort, e rivaliza com algoritmos 
 // como o Quicksort. A ideia básica é eliminar as tartarugas ou pequenos valores próximos do final da lista, já que em um bubble sort 
 // estes retardam a classificação tremendamente. 
@@ -12,6 +12,7 @@
 // Método semelhante ao Bubble Sort, porém mais eficiente. Na Bubble sort, quando quaisquer dois elementos são comparados, 
 // eles sempre têm um gap (distância um do outro) de 1. A ideia básica do Comb sort é que a diferença pode ser muito mais do que um. 
 // (O Shell sort também é baseado nesta ideia, mas é uma modificação do insertion sort em vez do bubble sort). 
+//
 
 void CombSort (int vet[], int tam){
 	int i, j, gap, swapped = 1;
