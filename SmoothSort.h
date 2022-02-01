@@ -2,7 +2,7 @@
 /* ***** FUNÇOES DE ORDENAÇÃO ***** */
 
 // Ordenação por SMOOTHSORT
-
+//
 /* 
 Smoothsort (método) é um algoritmo de ordenação de ordenação por comparação. É uma variação do heapsort e foi desenvolvido 
 por Edsger Dijkstra em 1981. Como o heapsort, o limite superior do smoothsort é de O(n log n). A vantagem de smoothsort é que 
