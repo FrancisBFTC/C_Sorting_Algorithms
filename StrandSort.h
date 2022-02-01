@@ -2,14 +2,13 @@
 /* ***** FUNÇOES DE ORDENAÇÃO ***** */
 
 // Ordenação por STRANDSORT
-
+//
 /* O Strand sort é um algoritmo de ordenação. Ele trabalha por repetidas vezes extraindo sublistas ordenadas da lista a ser classificada 
 e mesclando-as com um array resultado. Cada iteração através da lista não-ordenada extrai uma série de elementos que já estavam ordenados,
  e mescla as séries juntas. 
  
 O nome do algoritmo vem de "vertentes" de dados ordenados dentro da lista não-ordenada que são removidos um de cada vez. 
 É um algoritmo de ordenação por comparação devido ao seu uso de comparações, quando remove vertentes e ao mesclar-los para o array ordenado. 
- 
  */
  
 typedef struct node_t *node, node_t;
