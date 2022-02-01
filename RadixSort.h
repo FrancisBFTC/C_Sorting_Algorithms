@@ -9,7 +9,8 @@
 // podem representar strings compostas de caracteres (como nomes ou datas) e pontos flutuantes especialmente formatados, radix sort não é 
 // limitado somente a inteiros. 
 // O algoritmo de ordenação radix sort foi originalmente usado para ordenar cartões perfurados. Um algoritmo computacional para o 
-// radix sort foi inventado em 1954 no MIT por Harold H. Seward. 
+// radix sort foi inventado em 1954 no MIT por Harold H. Seward.
+//
 
 void RadixSort(int vector[], int size){
 	int i;
