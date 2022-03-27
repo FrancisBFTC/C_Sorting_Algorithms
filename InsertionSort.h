@@ -25,6 +25,8 @@ void InsertionSort (int vector[], int size){
     }                                       // Na próxima iteração o 2ª item passará a ser o 3ª, depois o 4ª,etc..
 }
 
+
+
 /* 
 Adaptação do InsertionSort para utilização do TimSort:
 
@@ -46,6 +48,8 @@ void Insertion(int vector[], int left, int right){
 		vector[j+1] = t;
 	}
 }
+
+
 
 /* ***** FIM DAS FUNÇOES DE ORDENAÇÃO ***** */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
